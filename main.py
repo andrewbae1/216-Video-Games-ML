@@ -38,6 +38,7 @@ def main():
     # Creates df subset based on user's entered criteria; .lower() ensure case-insensitive
     df_search_filter = (df_vg['Genre'].str.lower() == genre.lower()) & (df_vg['Platform'].str.lower() == platform.lower()) & (df_vg['Year'] >= min_year) & (df_vg['Year'] <= max_year)
     vg_subset = df_vg[df_search_filter]
+    print()
     print("Top 5 Games: ")
     print(vg_subset.head())
 
